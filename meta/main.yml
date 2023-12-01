@@ -1,0 +1,8 @@
+galaxy_info:
+  author: Johannes Horn
+  description: basic installation of vcenter
+  min_ansible_version: "2.1"
+  license: license GPL-2.0-or-later
+  galaxy_tags: []
+
+dependencies: []

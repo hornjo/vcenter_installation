@@ -1,0 +1,94 @@
+{
+  "cancelable": false,
+  "description": {
+    "args": [],
+    "default_message": "Install vCenter Server appliance.",
+    "id": "com.vmware.vcenter.deploy.task.description.op.install"
+  },
+  "end_time": "2023-12-01T10:44:21.721Z",
+  "operation": "INSTALL",
+  "progress": {
+    "completed": 2,
+    "message": {
+      "args": [],
+      "default_message": "Task has completed successfully.",
+      "id": "com.vmware.vcenter.deploy.task.complete.success"
+    },
+    "total": 3
+  },
+  "service": "",
+  "start_time": "2023-12-01T10:25:04.179Z",
+  "state": "CONFIGURED",
+  "status": "SUCCEEDED",
+  "subtask_order": [
+    "rpminstall",
+    "validate",
+    "firstboot"
+  ],
+  "subtasks": [
+    {
+      "key": "rpminstall",
+      "value": {
+        "cancelable": false,
+        "description": {
+          "args": [],
+          "default_message": "Install required RPMs for the appliance.",
+          "id": "com.vmware.vcenter.deploy.task.description.rpminstall"
+        },
+        "end_time": "2023-12-01T10:29:55.008Z",
+        "operation": "",
+        "progress": {
+          "completed": 100,
+          "message": {
+            "args": [],
+            "default_message": "Task has completed successfully.",
+            "id": "com.vmware.vcenter.deploy.task.complete.success"
+          },
+          "total": 100
+        },
+        "service": "",
+        "start_time": "2023-12-01T10:25:04.179Z",
+        "status": "SUCCEEDED"
+      }
+    },
+    {
+      "key": "validate",
+      "value": {
+        "cancelable": false,
+        "description": {
+          "args": [],
+          "default_message": "Validate input parameters.",
+          "id": "com.vmware.vcenter.deploy.task.description.validate"
+        },
+        "operation": "",
+        "service": "",
+        "status": "PENDING"
+      }
+    },
+    {
+      "key": "firstboot",
+      "value": {
+        "cancelable": false,
+        "description": {
+          "args": [],
+          "default_message": "Run firstboot scripts.",
+          "id": "com.vmware.vcenter.deploy.task.description.firstboot"
+        },
+        "end_time": "2023-12-01T10:44:21.721Z",
+        "operation": "",
+        "progress": {
+          "completed": 100,
+          "message": {
+            "args": [],
+            "default_message": "Task has completed successfully.",
+            "id": "com.vmware.vcenter.deploy.task.complete.success"
+          },
+          "total": 100
+        },
+        "service": "",
+        "start_time": "2023-12-01T10:29:57.261Z",
+        "status": "SUCCEEDED"
+      }
+    }
+  ]
+}

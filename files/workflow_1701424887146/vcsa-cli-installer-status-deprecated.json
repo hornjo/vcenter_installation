@@ -1,0 +1,147 @@
+{
+  "state": "<placeholder>",
+  "status": "SUCCEEDED",
+  "start_time": "2023-12-01T10:01:28.800858",
+  "last_updated_time": "2023-12-01T10:44:53.258333",
+  "end_time": "2023-12-01T10:44:53.258333",
+  "progress": {
+    "completed": 6,
+    "total": 6,
+    "message": {
+      "default_message": "Successfully executed Task 'ApplianceLoginSummaryTask: Provide appliance login information.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+      "id": "",
+      "args": []
+    }
+  },
+  "metadata_file": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/vcsa-cli-installer-metadata.json",
+  "tasks": {
+    "com.vmware.vcsa.installer.requirements.src_requirement": {
+      "description": "Validate that requirements are met in the source VCSA.",
+      "status": "SUCCEEDED",
+      "start_time": "2023-12-01T10:01:28.797945",
+      "last_updated_time": "2023-12-01T10:01:28.818275",
+      "end_time": "2023-12-01T10:01:28.818275",
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "message": {
+          "default_message": "Successfully executed Task 'SrcRequirementTask: Running SrcRequirementTask' in TaskFlow 'embedded_vCSA_on_ESXi'",
+          "id": "",
+          "args": []
+        }
+      },
+      "external_tools": [],
+      "info": [],
+      "warning": [],
+      "error": []
+    },
+    "com.vmware.vcsa.installer.prechecks": {
+      "description": "Perform precheck tasks.",
+      "status": "SUCCEEDED",
+      "start_time": "2023-12-01T10:01:28.914568",
+      "last_updated_time": "2023-12-01T10:02:31.808190",
+      "end_time": "2023-12-01T10:02:31.808190",
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "message": {
+          "default_message": "Successfully executed Task 'PrecheckTask: Running prechecks.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+          "id": "",
+          "args": []
+        }
+      },
+      "external_tools": [],
+      "info": [],
+      "warning": [],
+      "error": []
+    },
+    "com.vmware.vcsa.installer.ovf.deploy_appliance": {
+      "description": "Invoke OVF Tool to deploy VCSA for installation, upgrade, and migration",
+      "status": "SUCCEEDED",
+      "start_time": "2023-12-01T10:02:31.916434",
+      "last_updated_time": "2023-12-01T10:26:02.726053",
+      "end_time": "2023-12-01T10:26:02.726053",
+      "progress": {
+        "completed": 200,
+        "total": 200,
+        "message": {
+          "default_message": "Successfully executed Task 'Deploying vCenter Server Appliance' in TaskFlow 'embedded_vCSA_on_ESXi'",
+          "id": "",
+          "args": []
+        }
+      },
+      "external_tools": [],
+      "info": [],
+      "warning": [],
+      "error": []
+    },
+    "com.vmware.vcsa.installer.monitor.monitor_vcsa_deployment": {
+      "description": "Monitor the entire VCSA deployment using appliance REST API",
+      "status": "SUCCEEDED",
+      "start_time": "2023-12-01T10:26:02.851554",
+      "last_updated_time": "2023-12-01T10:44:52.965631",
+      "end_time": "2023-12-01T10:44:52.965631",
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "message": {
+          "default_message": "Successfully executed Task 'MonitorDeploymentTask: Monitoring Deployment' in TaskFlow 'embedded_vCSA_on_ESXi'",
+          "id": "",
+          "args": []
+        }
+      },
+      "external_tools": [],
+      "info": [],
+      "warning": [],
+      "error": []
+    },
+    "com.vmware.vcsa.installer.deployment.domain_join": {
+      "description": "Join active domain if necessary",
+      "status": "SUCCEEDED",
+      "start_time": "2023-12-01T10:44:53.094104",
+      "last_updated_time": "2023-12-01T10:44:53.119208",
+      "end_time": "2023-12-01T10:44:53.119208",
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "message": {
+          "default_message": "Successfully executed Task 'Running deployment: Domain Join' in TaskFlow 'embedded_vCSA_on_ESXi'",
+          "id": "",
+          "args": []
+        }
+      },
+      "external_tools": [],
+      "info": [],
+      "warning": [],
+      "error": []
+    },
+    "com.vmware.vcsa.installer.monitor.appliance_login_summary": {
+      "description": "Provide the login information about new appliance.",
+      "status": "SUCCEEDED",
+      "start_time": "2023-12-01T10:44:53.219509",
+      "last_updated_time": "2023-12-01T10:44:53.248216",
+      "end_time": "2023-12-01T10:44:53.248216",
+      "progress": {
+        "completed": 1,
+        "total": 1,
+        "message": {
+          "default_message": "Successfully executed Task 'ApplianceLoginSummaryTask: Provide appliance login information.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+          "id": "",
+          "args": []
+        }
+      },
+      "external_tools": [],
+      "info": [],
+      "warning": [],
+      "error": []
+    }
+  },
+  "task_order": [
+    "com.vmware.vcsa.installer.requirements.src_requirement",
+    "com.vmware.vcsa.installer.prechecks",
+    "com.vmware.vcsa.installer.ovf.deploy_appliance",
+    "com.vmware.vcsa.installer.monitor.monitor_vcsa_deployment",
+    "com.vmware.vcsa.installer.deployment.domain_join",
+    "com.vmware.vcsa.installer.monitor.appliance_login_summary"
+  ]
+}

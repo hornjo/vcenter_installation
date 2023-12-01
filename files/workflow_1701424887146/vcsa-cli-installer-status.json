@@ -1,0 +1,501 @@
+{
+  "template_validation": {
+    "service": false,
+    "state": "<placeholder>",
+    "status": "SUCCEEDED",
+    "start_time": "2023-12-01T10:01:28.326965",
+    "last_updated_time": "2023-12-01T10:01:28.623876",
+    "end_time": "2023-12-01T10:01:28.623876",
+    "progress": {
+      "completed": 5,
+      "total": 5,
+      "message": {
+        "default_message": "Successfully executed Task 'DependencyProcessingTask: Executing Template Dependency Processing task' in TaskFlow 'template_validation'",
+        "id": "",
+        "args": []
+      }
+    },
+    "metadata_file": "",
+    "subtask_order": [
+      [
+        "com.vmware.vcsa.installer.template.cli_argument_validation",
+        "com.vmware.vcsa.installer.template.syntax_validation"
+      ],
+      [
+        "com.vmware.vcsa.installer.template.syntax_validation",
+        "com.vmware.vcsa.installer.template.version_processing"
+      ],
+      [
+        "com.vmware.vcsa.installer.template.version_processing",
+        "com.vmware.vcsa.installer.template.structure_validation"
+      ],
+      [
+        "com.vmware.vcsa.installer.template.structure_validation",
+        "com.vmware.vcsa.installer.template.dependency_processing"
+      ]
+    ],
+    "subtasks": {
+      "com.vmware.vcsa.installer.template.cli_argument_validation": {
+        "description": "To validate CLI options",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.326900",
+        "last_updated_time": "2023-12-01T10:01:28.357557",
+        "end_time": "2023-12-01T10:01:28.357557",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'CLIOptionsValidationTask: Executing CLI optionsValidation task' in TaskFlow 'template_validation'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Command line arguments verified.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            }
+          ],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.template.syntax_validation": {
+        "description": "To validate the syntax of the template.",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.405531",
+        "last_updated_time": "2023-12-01T10:01:28.469104",
+        "end_time": "2023-12-01T10:01:28.469104",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'SyntaxValidationTask: Executing Template Syntax Validation task' in TaskFlow 'template_validation'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Template syntax validation for template '/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json' succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            },
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Syntax validation for all templates succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            }
+          ],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.template.version_processing": {
+        "description": "To check the version of each template, and for each older template that supports CEIP, convert it to the latest template format, and save it to the Template Blackboard",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.513598",
+        "last_updated_time": "2023-12-01T10:01:28.527596",
+        "end_time": "2023-12-01T10:01:28.527596",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'VersionProcessingTask: Executing Template Version Processing task' in TaskFlow 'template_validation'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Template version processing for template '/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json' succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            },
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Version processing for all templates succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            }
+          ],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.template.structure_validation": {
+        "description": "To validate the template structure against the rules specified by a corresponding template schema.",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.548167",
+        "last_updated_time": "2023-12-01T10:01:28.565075",
+        "end_time": "2023-12-01T10:01:28.565075",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'StructureValidationTask: Executing Template Structure Validation task' in TaskFlow 'template_validation'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Template structure validation for template '/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json' succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            },
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Structure validation for all templates succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            }
+          ],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.template.dependency_processing": {
+        "description": "To create a dependency graph for the provided templates, with an edge pairing two templates that are dependent on each other. Such graph relationships will affect whether certain templates can be deployed in parallel, or must be deployed sequentially.",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.587161",
+        "last_updated_time": "2023-12-01T10:01:28.615681",
+        "end_time": "2023-12-01T10:01:28.615681",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'DependencyProcessingTask: Executing Template Dependency Processing task' in TaskFlow 'template_validation'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [
+            {
+              "id": "",
+              "time": "2023-12-01T10:01:26.637764",
+              "message": {
+                "default_message": "Dependency processing for all templates succeeded.",
+                "id": "",
+                "args": []
+              },
+              "resolution": {
+                "default_message": "",
+                "id": "",
+                "args": []
+              }
+            }
+          ],
+          "warnings": [],
+          "errors": []
+        }
+      }
+    },
+    "appliance_info": {
+      "appliance_name": "",
+      "appliance_fqdn": "",
+      "appliance_ips": []
+    }
+  },
+  "embedded_vCSA_on_ESXi": {
+    "service": false,
+    "state": "<placeholder>",
+    "status": "SUCCEEDED",
+    "start_time": "2023-12-01T10:01:28.800858",
+    "last_updated_time": "2023-12-01T10:44:53.258333",
+    "end_time": "2023-12-01T10:44:53.258333",
+    "progress": {
+      "completed": 6,
+      "total": 6,
+      "message": {
+        "default_message": "Successfully executed Task 'ApplianceLoginSummaryTask: Provide appliance login information.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+        "id": "",
+        "args": []
+      }
+    },
+    "metadata_file": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/vcsa-cli-installer-metadata.json",
+    "subtask_order": [
+      [
+        "com.vmware.vcsa.installer.requirements.src_requirement",
+        "com.vmware.vcsa.installer.prechecks"
+      ],
+      [
+        "com.vmware.vcsa.installer.prechecks",
+        "com.vmware.vcsa.installer.ovf.deploy_appliance"
+      ],
+      [
+        "com.vmware.vcsa.installer.ovf.deploy_appliance",
+        "com.vmware.vcsa.installer.monitor.monitor_vcsa_deployment"
+      ],
+      [
+        "com.vmware.vcsa.installer.monitor.monitor_vcsa_deployment",
+        "com.vmware.vcsa.installer.deployment.domain_join"
+      ],
+      [
+        "com.vmware.vcsa.installer.deployment.domain_join",
+        "com.vmware.vcsa.installer.monitor.appliance_login_summary"
+      ]
+    ],
+    "subtasks": {
+      "com.vmware.vcsa.installer.requirements.src_requirement": {
+        "description": "Validate that requirements are met in the source VCSA.",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.797945",
+        "last_updated_time": "2023-12-01T10:01:28.818275",
+        "end_time": "2023-12-01T10:01:28.818275",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'SrcRequirementTask: Running SrcRequirementTask' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.prechecks": {
+        "description": "Perform precheck tasks.",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.914568",
+        "last_updated_time": "2023-12-01T10:02:31.808190",
+        "end_time": "2023-12-01T10:02:31.808190",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'PrecheckTask: Running prechecks.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.ovf.deploy_appliance": {
+        "description": "Invoke OVF Tool to deploy VCSA for installation, upgrade, and migration",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:02:31.916434",
+        "last_updated_time": "2023-12-01T10:26:02.726053",
+        "end_time": "2023-12-01T10:26:02.726053",
+        "progress": {
+          "completed": 200,
+          "total": 200,
+          "message": {
+            "default_message": "Successfully executed Task 'Deploying vCenter Server Appliance' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.monitor.monitor_vcsa_deployment": {
+        "description": "Monitor the entire VCSA deployment using appliance REST API",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:26:02.851554",
+        "last_updated_time": "2023-12-01T10:44:52.965631",
+        "end_time": "2023-12-01T10:44:52.965631",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'MonitorDeploymentTask: Monitoring Deployment' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.deployment.domain_join": {
+        "description": "Join active domain if necessary",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:44:53.094104",
+        "last_updated_time": "2023-12-01T10:44:53.119208",
+        "end_time": "2023-12-01T10:44:53.119208",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'Running deployment: Domain Join' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      },
+      "com.vmware.vcsa.installer.monitor.appliance_login_summary": {
+        "description": "Provide the login information about new appliance.",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:44:53.219509",
+        "last_updated_time": "2023-12-01T10:44:53.248216",
+        "end_time": "2023-12-01T10:44:53.248216",
+        "progress": {
+          "completed": 1,
+          "total": 1,
+          "message": {
+            "default_message": "Successfully executed Task 'ApplianceLoginSummaryTask: Provide appliance login information.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      }
+    },
+    "appliance_info": {
+      "appliance_name": "DEV_DEU_CE01VCSA01",
+      "appliance_fqdn": "ce01vcsa01.dev.deu.local",
+      "appliance_ips": [
+        "10.33.0.47"
+      ]
+    }
+  },
+  "workflow_summary": {
+    "service": false,
+    "state": "<placeholder>",
+    "status": "SUCCEEDED",
+    "start_time": "2023-12-01T10:01:28.762703",
+    "last_updated_time": "2023-12-01T10:44:53.314831",
+    "end_time": "2023-12-01T10:44:53.314831",
+    "progress": {
+      "completed": 1,
+      "total": 1,
+      "message": {
+        "default_message": "Successfully executed Task 'ApplianceLoginSummaryTask: Provide appliance login information.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+        "id": "",
+        "args": []
+      }
+    },
+    "metadata_file": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/vcsa-cli-installer-metadata.json",
+    "subtask_order": [],
+    "subtasks": {
+      "embedded_vCSA_on_ESXi": {
+        "description": "Install scenario",
+        "status": "SUCCEEDED",
+        "start_time": "2023-12-01T10:01:28.762688",
+        "last_updated_time": "2023-12-01T10:44:53.314819",
+        "end_time": "2023-12-01T10:44:53.314819",
+        "progress": {
+          "completed": 6,
+          "total": 6,
+          "message": {
+            "default_message": "Successfully executed Task 'ApplianceLoginSummaryTask: Provide appliance login information.' in TaskFlow 'embedded_vCSA_on_ESXi'",
+            "id": "",
+            "args": []
+          }
+        },
+        "external_tools": [],
+        "result": {
+          "info": [],
+          "warnings": [],
+          "errors": []
+        }
+      }
+    },
+    "appliance_info": {
+      "appliance_name": "",
+      "appliance_fqdn": "",
+      "appliance_ips": ""
+    }
+  }
+}

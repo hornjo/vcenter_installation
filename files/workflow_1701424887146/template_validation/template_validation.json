@@ -1,0 +1,965 @@
+{
+  "py/object": "task_flows.template_validation.TemplateValidationTaskFlow",
+  "py/state": {
+    "graph": {},
+    "_node": {
+      "<CLIOptionsValidationTask - com.vmware.vcsa.installer.template.cli_argument_validation(SUCCEEDED)>": {},
+      "<SyntaxValidationTask - com.vmware.vcsa.installer.template.syntax_validation(SUCCEEDED)>": {},
+      "<VersionProcessingTask - com.vmware.vcsa.installer.template.version_processing(SUCCEEDED)>": {},
+      "<StructureValidationTask - com.vmware.vcsa.installer.template.structure_validation(SUCCEEDED)>": {},
+      "<DependencyProcessingTask - com.vmware.vcsa.installer.template.dependency_processing(SUCCEEDED)>": {}
+    },
+    "_adj": {
+      "<CLIOptionsValidationTask - com.vmware.vcsa.installer.template.cli_argument_validation(SUCCEEDED)>": {
+        "<SyntaxValidationTask - com.vmware.vcsa.installer.template.syntax_validation(SUCCEEDED)>": {}
+      },
+      "<SyntaxValidationTask - com.vmware.vcsa.installer.template.syntax_validation(SUCCEEDED)>": {
+        "<VersionProcessingTask - com.vmware.vcsa.installer.template.version_processing(SUCCEEDED)>": {}
+      },
+      "<VersionProcessingTask - com.vmware.vcsa.installer.template.version_processing(SUCCEEDED)>": {
+        "<StructureValidationTask - com.vmware.vcsa.installer.template.structure_validation(SUCCEEDED)>": {}
+      },
+      "<StructureValidationTask - com.vmware.vcsa.installer.template.structure_validation(SUCCEEDED)>": {
+        "<DependencyProcessingTask - com.vmware.vcsa.installer.template.dependency_processing(SUCCEEDED)>": {}
+      },
+      "<DependencyProcessingTask - com.vmware.vcsa.installer.template.dependency_processing(SUCCEEDED)>": {}
+    },
+    "_succ": {
+      "py/id": 9
+    },
+    "_pred": {
+      "<CLIOptionsValidationTask - com.vmware.vcsa.installer.template.cli_argument_validation(SUCCEEDED)>": {},
+      "<SyntaxValidationTask - com.vmware.vcsa.installer.template.syntax_validation(SUCCEEDED)>": {
+        "<CLIOptionsValidationTask - com.vmware.vcsa.installer.template.cli_argument_validation(SUCCEEDED)>": {
+          "py/id": 11
+        }
+      },
+      "<VersionProcessingTask - com.vmware.vcsa.installer.template.version_processing(SUCCEEDED)>": {
+        "<SyntaxValidationTask - com.vmware.vcsa.installer.template.syntax_validation(SUCCEEDED)>": {
+          "py/id": 13
+        }
+      },
+      "<StructureValidationTask - com.vmware.vcsa.installer.template.structure_validation(SUCCEEDED)>": {
+        "<VersionProcessingTask - com.vmware.vcsa.installer.template.version_processing(SUCCEEDED)>": {
+          "py/id": 15
+        }
+      },
+      "<DependencyProcessingTask - com.vmware.vcsa.installer.template.dependency_processing(SUCCEEDED)>": {
+        "<StructureValidationTask - com.vmware.vcsa.installer.template.structure_validation(SUCCEEDED)>": {
+          "py/id": 17
+        }
+      }
+    },
+    "observers": [],
+    "status": {
+      "py/reduce": [
+        {
+          "py/type": "tasking.utils.executable.Status"
+        },
+        {
+          "py/tuple": [
+            4
+          ]
+        }
+      ]
+    },
+    "execute_retried": 0,
+    "rollback_retried": 0,
+    "execute_retry": 0,
+    "rollback_retry": 0,
+    "ignore_if_failed": false,
+    "identifier": "com.vmware.vcsa.installer.template_validation-21e4288c-2f1e-41f8-82eb-49dae2cca02c",
+    "summary": "",
+    "description": "Validate syntax, version, structure, and dependencies of the given templates.",
+    "_definition": [
+      {
+        "py/tuple": [
+          {
+            "py/object": "cli_tasks.cli_opt_validation.cli_opt_validation_task.CLIOptionsValidationTask",
+            "py/state": {
+              "observers": [
+                {
+                  "py/id": 0
+                }
+              ],
+              "status": {
+                "py/id": 26
+              },
+              "execute_retried": 1,
+              "rollback_retried": 0,
+              "execute_retry": 0,
+              "rollback_retry": 0,
+              "ignore_if_failed": false,
+              "identifier": "com.vmware.vcsa.installer.template.cli_argument_validation",
+              "summary": "CLIOptionsValidationTask: Executing CLI optionsValidation task",
+              "description": "To validate CLI options",
+              "blackboard": {
+                "py/object": "tasking.utils.blackboard.Blackboard",
+                "py/state": {
+                  "data": {
+                    "template_list": [
+                      "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json"
+                    ],
+                    "template_format": "json",
+                    "operation": "install",
+                    "workflow_logger_name": "vCSACliInstallLogger",
+                    "cli_arg_accept_eula": true,
+                    "cli_arg_verify_template_only": false,
+                    "workflow_log_dir": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146",
+                    "cli_arg_acknowledge_ceip": true,
+                    "cli_arg_precheck_rpm_path": null
+                  },
+                  "json_file_path": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/template_validation/blackboard.json",
+                  "maskables_dict": null
+                }
+              },
+              "global_blackboard": null,
+              "successful_result_message": "CLI options successfully validated.",
+              "required_bb_keys": {
+                "py/tuple": [
+                  "template_list",
+                  "cli_arg_accept_eula",
+                  "cli_arg_acknowledge_ceip",
+                  "cli_arg_verify_template_only"
+                ]
+              },
+              "total_subtasks": 1,
+              "exception": null,
+              "traceback": null,
+              "processed": null,
+              "taskflow_current_status": {
+                "py/object": "pylcmstatus.lcm_status.CurrentStatus",
+                "log_location": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/template_validation/status.json",
+                "status": {
+                  "py/object": "pylcmstatus.lcm_status.Status",
+                  "name": "SUCCEEDED",
+                  "_description": "Task succeeded"
+                },
+                "start_time": "2023-12-01T10:01:28.326965",
+                "last_updated_time": "2023-12-01T10:01:28.623876",
+                "end_time": "2023-12-01T10:01:28.623876",
+                "progress": {
+                  "py/object": "pylcmstatus.lcm_status.Progress",
+                  "total": 5,
+                  "completed": 5,
+                  "message": {
+                    "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                    "default_message": "Successfully executed Task 'DependencyProcessingTask: Executing Template Dependency Processing task' in TaskFlow 'template_validation'",
+                    "id": "",
+                    "args": []
+                  }
+                },
+                "metadata_file": "",
+                "operation": null,
+                "service": false,
+                "description": null,
+                "subtasks": {
+                  "com.vmware.vcsa.installer.template.cli_argument_validation": {
+                    "py/object": "pylcmstatus.lcm_status.Task",
+                    "name": "com.vmware.vcsa.installer.template.cli_argument_validation",
+                    "description": "To validate CLI options",
+                    "progress": {
+                      "py/object": "pylcmstatus.lcm_status.Progress",
+                      "total": 1,
+                      "completed": 1,
+                      "message": {
+                        "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                        "default_message": "Successfully executed Task 'CLIOptionsValidationTask: Executing CLI optionsValidation task' in TaskFlow 'template_validation'",
+                        "id": "",
+                        "args": {
+                          "py/id": 39
+                        }
+                      }
+                    },
+                    "start_time": "2023-12-01T10:01:28.326900",
+                    "last_updated_time": "2023-12-01T10:01:28.357557",
+                    "end_time": "2023-12-01T10:01:28.357557",
+                    "external_tools": [],
+                    "status": {
+                      "py/id": 36
+                    },
+                    "result": {
+                      "py/object": "pylcmstatus.lcm_status.Result",
+                      "info": [
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/object": "pylcmstatus.lcm_status.Severity",
+                            "name": "INFO",
+                            "_description": "INFO"
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Command line arguments verified.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        }
+                      ],
+                      "warnings": [],
+                      "errors": [],
+                      "_ordering": []
+                    }
+                  },
+                  "com.vmware.vcsa.installer.template.syntax_validation": {
+                    "py/object": "pylcmstatus.lcm_status.Task",
+                    "name": "com.vmware.vcsa.installer.template.syntax_validation",
+                    "description": "To validate the syntax of the template.",
+                    "progress": {
+                      "py/object": "pylcmstatus.lcm_status.Progress",
+                      "total": 1,
+                      "completed": 1,
+                      "message": {
+                        "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                        "default_message": "Successfully executed Task 'SyntaxValidationTask: Executing Template Syntax Validation task' in TaskFlow 'template_validation'",
+                        "id": "",
+                        "args": {
+                          "py/id": 39
+                        }
+                      }
+                    },
+                    "start_time": "2023-12-01T10:01:28.405531",
+                    "last_updated_time": "2023-12-01T10:01:28.469104",
+                    "end_time": "2023-12-01T10:01:28.469104",
+                    "external_tools": [],
+                    "status": {
+                      "py/id": 36
+                    },
+                    "result": {
+                      "py/object": "pylcmstatus.lcm_status.Result",
+                      "info": [
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Template syntax validation for template '/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json' succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        },
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Syntax validation for all templates succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        }
+                      ],
+                      "warnings": [],
+                      "errors": [],
+                      "_ordering": []
+                    }
+                  },
+                  "com.vmware.vcsa.installer.template.version_processing": {
+                    "py/object": "pylcmstatus.lcm_status.Task",
+                    "name": "com.vmware.vcsa.installer.template.version_processing",
+                    "description": "To check the version of each template, and for each older template that supports CEIP, convert it to the latest template format, and save it to the Template Blackboard",
+                    "progress": {
+                      "py/object": "pylcmstatus.lcm_status.Progress",
+                      "total": 1,
+                      "completed": 1,
+                      "message": {
+                        "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                        "default_message": "Successfully executed Task 'VersionProcessingTask: Executing Template Version Processing task' in TaskFlow 'template_validation'",
+                        "id": "",
+                        "args": {
+                          "py/id": 39
+                        }
+                      }
+                    },
+                    "start_time": "2023-12-01T10:01:28.513598",
+                    "last_updated_time": "2023-12-01T10:01:28.527596",
+                    "end_time": "2023-12-01T10:01:28.527596",
+                    "external_tools": [],
+                    "status": {
+                      "py/id": 36
+                    },
+                    "result": {
+                      "py/object": "pylcmstatus.lcm_status.Result",
+                      "info": [
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Template version processing for template '/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json' succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        },
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Version processing for all templates succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        }
+                      ],
+                      "warnings": [],
+                      "errors": [],
+                      "_ordering": []
+                    }
+                  },
+                  "com.vmware.vcsa.installer.template.structure_validation": {
+                    "py/object": "pylcmstatus.lcm_status.Task",
+                    "name": "com.vmware.vcsa.installer.template.structure_validation",
+                    "description": "To validate the template structure against the rules specified by a corresponding template schema.",
+                    "progress": {
+                      "py/object": "pylcmstatus.lcm_status.Progress",
+                      "total": 1,
+                      "completed": 1,
+                      "message": {
+                        "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                        "default_message": "Successfully executed Task 'StructureValidationTask: Executing Template Structure Validation task' in TaskFlow 'template_validation'",
+                        "id": "",
+                        "args": {
+                          "py/id": 39
+                        }
+                      }
+                    },
+                    "start_time": "2023-12-01T10:01:28.548167",
+                    "last_updated_time": "2023-12-01T10:01:28.565075",
+                    "end_time": "2023-12-01T10:01:28.565075",
+                    "external_tools": [],
+                    "status": {
+                      "py/id": 36
+                    },
+                    "result": {
+                      "py/object": "pylcmstatus.lcm_status.Result",
+                      "info": [
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Template structure validation for template '/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json' succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        },
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Structure validation for all templates succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        }
+                      ],
+                      "warnings": [],
+                      "errors": [],
+                      "_ordering": []
+                    }
+                  },
+                  "com.vmware.vcsa.installer.template.dependency_processing": {
+                    "py/object": "pylcmstatus.lcm_status.Task",
+                    "name": "com.vmware.vcsa.installer.template.dependency_processing",
+                    "description": "To create a dependency graph for the provided templates, with an edge pairing two templates that are dependent on each other. Such graph relationships will affect whether certain templates can be deployed in parallel, or must be deployed sequentially.",
+                    "progress": {
+                      "py/object": "pylcmstatus.lcm_status.Progress",
+                      "total": 1,
+                      "completed": 1,
+                      "message": {
+                        "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                        "default_message": "Successfully executed Task 'DependencyProcessingTask: Executing Template Dependency Processing task' in TaskFlow 'template_validation'",
+                        "id": "",
+                        "args": {
+                          "py/id": 39
+                        }
+                      }
+                    },
+                    "start_time": "2023-12-01T10:01:28.587161",
+                    "last_updated_time": "2023-12-01T10:01:28.615681",
+                    "end_time": "2023-12-01T10:01:28.615681",
+                    "external_tools": [],
+                    "status": {
+                      "py/id": 36
+                    },
+                    "result": {
+                      "py/object": "pylcmstatus.lcm_status.Result",
+                      "info": [
+                        {
+                          "py/object": "pylcmstatus.lcm_status.Notification",
+                          "id": "",
+                          "severity": {
+                            "py/id": 48
+                          },
+                          "time": "2023-12-01T10:01:26.637764",
+                          "message": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "Dependency processing for all templates succeeded.",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          },
+                          "resolution": {
+                            "py/object": "pylcmstatus.lcm_status.LocalizableMessage",
+                            "default_message": "",
+                            "id": "",
+                            "args": {
+                              "py/id": 39
+                            }
+                          }
+                        }
+                      ],
+                      "warnings": [],
+                      "errors": [],
+                      "_ordering": []
+                    }
+                  }
+                },
+                "subtask_order": [
+                  {
+                    "py/tuple": [
+                      "com.vmware.vcsa.installer.template.cli_argument_validation",
+                      "com.vmware.vcsa.installer.template.syntax_validation"
+                    ]
+                  },
+                  {
+                    "py/tuple": [
+                      "com.vmware.vcsa.installer.template.syntax_validation",
+                      "com.vmware.vcsa.installer.template.version_processing"
+                    ]
+                  },
+                  {
+                    "py/tuple": [
+                      "com.vmware.vcsa.installer.template.version_processing",
+                      "com.vmware.vcsa.installer.template.structure_validation"
+                    ]
+                  },
+                  {
+                    "py/tuple": [
+                      "com.vmware.vcsa.installer.template.structure_validation",
+                      "com.vmware.vcsa.installer.template.dependency_processing"
+                    ]
+                  }
+                ],
+                "state": "<placeholder>",
+                "appliance_info": {
+                  "py/object": "pylcmstatus.lcm_status.ApplianceInfo",
+                  "appliance_name": "",
+                  "appliance_fqdn": "",
+                  "appliance_ips": []
+                },
+                "_task_ordered": true
+              },
+              "taskflow_unique_identifier": "template_validation",
+              "main_logger_name": "vCSACliInstallLogger",
+              "workflow_identifier": "workflow_1701424887146",
+              "telemetry": {
+                "py/object": "telemetry.TaskTelemetryObjectImp",
+                "instance_id": "91657bbd673fe5bc431fe83eafcb670d933bb74203fd80a509f624c58ca468a9",
+                "vac_url": "https://vcsa.vmware.com/ph/",
+                "run_id": "1893a7a0d31a44f1819aa4ceca8ed96e",
+                "task_id": "",
+                "start_time": "",
+                "end_time": "",
+                "status": "",
+                "error_id": "",
+                "task": {
+                  "py/id": 28
+                },
+                "version": "8.0.2.00000",
+                "taskflow_unique_identifier": "de36867a88d407265e92ee242a644f83bbbe3a9b"
+              }
+            }
+          },
+          {
+            "py/object": "cli_tasks.template_validation.syntax_validation_task.SyntaxValidationTask",
+            "py/state": {
+              "observers": [
+                {
+                  "py/id": 0
+                }
+              ],
+              "status": {
+                "py/id": 26
+              },
+              "execute_retried": 1,
+              "rollback_retried": 0,
+              "execute_retry": 0,
+              "rollback_retry": 0,
+              "ignore_if_failed": false,
+              "identifier": "com.vmware.vcsa.installer.template.syntax_validation",
+              "summary": "SyntaxValidationTask: Executing Template Syntax Validation task",
+              "description": "To validate the syntax of the template.",
+              "blackboard": {
+                "py/id": 31
+              },
+              "global_blackboard": null,
+              "successful_result_message": "The template syntax has been successfully validated.",
+              "required_bb_keys": {
+                "py/tuple": [
+                  "template_list",
+                  "template_format"
+                ]
+              },
+              "total_subtasks": 1,
+              "exception": null,
+              "traceback": null,
+              "processed": null,
+              "taskflow_current_status": {
+                "py/id": 35
+              },
+              "taskflow_unique_identifier": "template_validation",
+              "main_logger_name": "vCSACliInstallLogger",
+              "workflow_identifier": "workflow_1701424887146",
+              "telemetry": {
+                "py/object": "telemetry.TaskTelemetryObjectImp",
+                "instance_id": "91657bbd673fe5bc431fe83eafcb670d933bb74203fd80a509f624c58ca468a9",
+                "vac_url": "https://vcsa.vmware.com/ph/",
+                "run_id": "1893a7a0d31a44f1819aa4ceca8ed96e",
+                "task_id": "",
+                "start_time": "",
+                "end_time": "",
+                "status": "",
+                "error_id": "",
+                "task": {
+                  "py/id": 115
+                },
+                "version": "8.0.2.00000",
+                "taskflow_unique_identifier": "de36867a88d407265e92ee242a644f83bbbe3a9b"
+              },
+              "_template_format": "json",
+              "_template_list": {
+                "py/id": 34
+              }
+            }
+          }
+        ]
+      },
+      {
+        "py/tuple": [
+          {
+            "py/id": 115
+          },
+          {
+            "py/object": "cli_tasks.template_validation.version_processing_task.VersionProcessingTask",
+            "py/state": {
+              "observers": [
+                {
+                  "py/id": 0
+                }
+              ],
+              "status": {
+                "py/id": 26
+              },
+              "execute_retried": 1,
+              "rollback_retried": 0,
+              "execute_retry": 0,
+              "rollback_retry": 0,
+              "ignore_if_failed": false,
+              "identifier": "com.vmware.vcsa.installer.template.version_processing",
+              "summary": "VersionProcessingTask: Executing Template Version Processing task",
+              "description": "To check the version of each template, and for each older template that supports CEIP, convert it to the latest template format, and save it to the Template Blackboard",
+              "blackboard": {
+                "py/id": 31
+              },
+              "global_blackboard": null,
+              "successful_result_message": "The template version processing was completed successfully.",
+              "required_bb_keys": {
+                "py/tuple": [
+                  "operation",
+                  "template_list",
+                  "workflow_log_dir"
+                ]
+              },
+              "total_subtasks": 1,
+              "exception": null,
+              "traceback": null,
+              "processed": null,
+              "taskflow_current_status": {
+                "py/id": 35
+              },
+              "taskflow_unique_identifier": "template_validation",
+              "main_logger_name": "vCSACliInstallLogger",
+              "workflow_identifier": "workflow_1701424887146",
+              "telemetry": {
+                "py/object": "telemetry.TaskTelemetryObjectImp",
+                "instance_id": "91657bbd673fe5bc431fe83eafcb670d933bb74203fd80a509f624c58ca468a9",
+                "vac_url": "https://vcsa.vmware.com/ph/",
+                "run_id": "1893a7a0d31a44f1819aa4ceca8ed96e",
+                "task_id": "",
+                "start_time": "",
+                "end_time": "",
+                "status": "",
+                "error_id": "",
+                "task": {
+                  "py/id": 119
+                },
+                "version": "8.0.2.00000",
+                "taskflow_unique_identifier": "de36867a88d407265e92ee242a644f83bbbe3a9b"
+              },
+              "_operation": "install",
+              "_template_list": {
+                "py/id": 34
+              }
+            }
+          }
+        ]
+      },
+      {
+        "py/tuple": [
+          {
+            "py/id": 119
+          },
+          {
+            "py/object": "cli_tasks.template_validation.structure_validation_task.StructureValidationTask",
+            "py/state": {
+              "observers": [
+                {
+                  "py/id": 0
+                }
+              ],
+              "status": {
+                "py/id": 26
+              },
+              "execute_retried": 1,
+              "rollback_retried": 0,
+              "execute_retry": 0,
+              "rollback_retry": 0,
+              "ignore_if_failed": false,
+              "identifier": "com.vmware.vcsa.installer.template.structure_validation",
+              "summary": "StructureValidationTask: Executing Template Structure Validation task",
+              "description": "To validate the template structure against the rules specified by a corresponding template schema.",
+              "blackboard": {
+                "py/id": 31
+              },
+              "global_blackboard": null,
+              "successful_result_message": "The template structure was successfully validated.",
+              "required_bb_keys": {
+                "py/tuple": [
+                  "operation",
+                  "template_list",
+                  "template_format"
+                ]
+              },
+              "total_subtasks": 1,
+              "exception": null,
+              "traceback": null,
+              "processed": null,
+              "taskflow_current_status": {
+                "py/id": 35
+              },
+              "taskflow_unique_identifier": "template_validation",
+              "main_logger_name": "vCSACliInstallLogger",
+              "workflow_identifier": "workflow_1701424887146",
+              "telemetry": {
+                "py/object": "telemetry.TaskTelemetryObjectImp",
+                "instance_id": "91657bbd673fe5bc431fe83eafcb670d933bb74203fd80a509f624c58ca468a9",
+                "vac_url": "https://vcsa.vmware.com/ph/",
+                "run_id": "1893a7a0d31a44f1819aa4ceca8ed96e",
+                "task_id": "",
+                "start_time": "",
+                "end_time": "",
+                "status": "",
+                "error_id": "",
+                "task": {
+                  "py/id": 123
+                },
+                "version": "8.0.2.00000",
+                "taskflow_unique_identifier": "de36867a88d407265e92ee242a644f83bbbe3a9b"
+              },
+              "_operation": "install",
+              "_template_list": {
+                "py/id": 34
+              },
+              "_template_type_list": [
+                "embedded"
+              ],
+              "_template_format": "json"
+            }
+          }
+        ]
+      },
+      {
+        "py/tuple": [
+          {
+            "py/id": 123
+          },
+          {
+            "py/object": "cli_tasks.template_validation.dependency_processing_task.DependencyProcessingTask",
+            "py/state": {
+              "observers": [
+                {
+                  "py/id": 0
+                }
+              ],
+              "status": {
+                "py/id": 26
+              },
+              "execute_retried": 1,
+              "rollback_retried": 0,
+              "execute_retry": 0,
+              "rollback_retry": 0,
+              "ignore_if_failed": false,
+              "identifier": "com.vmware.vcsa.installer.template.dependency_processing",
+              "summary": "DependencyProcessingTask: Executing Template Dependency Processing task",
+              "description": "To create a dependency graph for the provided templates, with an edge pairing two templates that are dependent on each other. Such graph relationships will affect whether certain templates can be deployed in parallel, or must be deployed sequentially.",
+              "blackboard": {
+                "py/id": 31
+              },
+              "global_blackboard": null,
+              "successful_result_message": "The template dependency processing was completed successfully",
+              "required_bb_keys": {
+                "py/tuple": [
+                  "operation",
+                  "template_list"
+                ]
+              },
+              "total_subtasks": 1,
+              "exception": null,
+              "traceback": null,
+              "processed": null,
+              "taskflow_current_status": {
+                "py/id": 35
+              },
+              "taskflow_unique_identifier": "template_validation",
+              "main_logger_name": "vCSACliInstallLogger",
+              "workflow_identifier": "workflow_1701424887146",
+              "telemetry": {
+                "py/object": "telemetry.TaskTelemetryObjectImp",
+                "instance_id": "91657bbd673fe5bc431fe83eafcb670d933bb74203fd80a509f624c58ca468a9",
+                "vac_url": "https://vcsa.vmware.com/ph/",
+                "run_id": "1893a7a0d31a44f1819aa4ceca8ed96e",
+                "task_id": "",
+                "start_time": "",
+                "end_time": "",
+                "status": "",
+                "error_id": "",
+                "task": {
+                  "py/id": 128
+                },
+                "version": "8.0.2.00000",
+                "taskflow_unique_identifier": "de36867a88d407265e92ee242a644f83bbbe3a9b"
+              },
+              "_operation": "install",
+              "_template_list": {
+                "py/id": 34
+              },
+              "_PSC_NAME_LOG": "/var/tmp/vmware/vcsa_cli_psc_name.log",
+              "_vm_connection": null,
+              "_vim_helper": null
+            }
+          }
+        ]
+      }
+    ],
+    "maskables_dict": null,
+    "unique_identifier": "template_validation",
+    "wf_log_dir": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146",
+    "log_dir": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/template_validation",
+    "result_file": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/template_validation/vcsa-cli-installer-result.json",
+    "start_execution_time": 1701424888.306977,
+    "operation_id": null,
+    "main_logger_name": "vCSACliInstallLogger",
+    "workflow_identifier": "workflow_1701424887146",
+    "use_threading": false,
+    "blackboard": {
+      "py/id": 31
+    },
+    "_status_updaters": [],
+    "global_blackboard": null,
+    "current_status": {
+      "py/id": 35
+    },
+    "nodes": {
+      "py/object": "networkx.classes.reportviews.NodeView",
+      "py/state": {
+        "_nodes": {
+          "py/id": 3
+        }
+      }
+    },
+    "succ": {
+      "py/object": "networkx.classes.coreviews.AdjacencyView",
+      "py/state": {
+        "_atlas": {
+          "py/id": 9
+        }
+      }
+    },
+    "edges": {
+      "py/object": "networkx.classes.reportviews.OutEdgeView",
+      "py/state": {
+        "_graph": {
+          "py/id": 0
+        },
+        "_adjdict": {
+          "py/id": 9
+        }
+      }
+    },
+    "aggregated_status_handler": {
+      "py/object": "tasking.utils.aggregated_status_handler.AggregatedStatusHandler",
+      "filepath": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/vcsa-cli-installer-status.json",
+      "instance_map": {
+        "template_validation": {
+          "py/tuple": [
+            {
+              "py/id": 0
+            },
+            "current_status"
+          ]
+        }
+      }
+    },
+    "telemetry": {
+      "py/object": "telemetry.TaskFlowTelemetryObjectImp",
+      "instance_id": "91657bbd673fe5bc431fe83eafcb670d933bb74203fd80a509f624c58ca468a9",
+      "vac_url": "https://vcsa.vmware.com/ph/",
+      "run_id": "1893a7a0d31a44f1819aa4ceca8ed96e",
+      "source_vc_id": "",
+      "source_vc_version": "",
+      "target_vc_id": "",
+      "target_vc_version": "",
+      "operation": "",
+      "on_esxi": "",
+      "start_time": "",
+      "end_time": "",
+      "appliance_type": "",
+      "deployment_option": "",
+      "thin_disk_mode": "",
+      "ssh_enabled": "",
+      "network_mode": "",
+      "is_standalone": "",
+      "data_set": "",
+      "defer_import": "",
+      "database_size": "",
+      "invoker": "cli-client",
+      "cluster_option": "",
+      "cluster_deduplication_enabled": "",
+      "cluster_compression_only": "",
+      "cluster_cache_disk_length": "",
+      "cluster_capacity_disk_length": "",
+      "cluster_seedhost_version": "",
+      "storage_pool_size": "",
+      "download_vsan_hcl_db_duration": "",
+      "upload_vsan_hcl_db_to_host_duration": "",
+      "vsan_health_check_duration": "",
+      "network_ip_family": "",
+      "stage_failed": "",
+      "precheck_task_duration": "",
+      "appliance_deployment_task_duration": "",
+      "rpm_deployment_task_duration": "",
+      "firstboot_task_duration": "",
+      "new_vc_target_path": "",
+      "custom_network_port": "",
+      "custom_domain_name": "",
+      "deployment_jumphost_os": "",
+      "jumphost_os_release": "",
+      "taskflow": {
+        "py/id": 0
+      },
+      "version": "8.0.2.00000",
+      "taskflow_unique_identifier": "de36867a88d407265e92ee242a644f83bbbe3a9b",
+      "product": "VCSA"
+    }
+  }
+}

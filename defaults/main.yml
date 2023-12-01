@@ -1,0 +1,23 @@
+---
+vcenter_installation_esxi_username: "root"
+vcenter_installation_vm_name: "DEV_DEU_CE01VCSA01"
+vcenter_installation_hostname: "ce01vcsa01"
+vcenter_installation_username: "administrator@vsphere.local"
+vcenter_installation_root_password: "Letmein123!"
+vcenter_installation_password: "Letmein123!"
+vcenter_installation_domain: "dev.deu.local"
+vcenter_installation_target_datastore: "datastore1"
+vcenter_installation_target_network: "VM Network"
+vcenter_installation_size: "tiny"
+vcenter_installation_timezone: "Europe/Berlin"
+vcenter_installation_mtu: "1500"
+vcenter_installation_prefix: "24"
+vcenter_installation_dns_servers:
+  - "8.8.8.8"
+  - "4.4.4.4"
+vcenter_installation_ntp_servers:
+  - "8.8.8.8"
+  - "4.4.4.4"
+
+vcenter_installation_datacenter_name: "Test-Center"
+vcenter_installation_cluster_name: "Test-Cluster"

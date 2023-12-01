@@ -1,0 +1,18 @@
+---
+- name: Testing the whole Role
+  hosts: esxi_hosts
+  gather_facts: false
+  tasks:
+    - name: Installation vCenter
+      ansible.builtin.include_role:
+        name: vcenter_installation
+      vars:
+        vcenter_installation_ip: "10.33.0.47"
+        vcenter_installation_gateway: "10.33.0.254"
+        vcenter_installation_dns_servers:
+          - "10.33.15.1"
+          - "10.33.15.2"
+        vcenter_installation_ntp_servers:
+          - "10.32.10.1"
+          - "10.32.10.2"
+        vcenter_installation_installer_path: "/Users/johanneshorn/Documents/VMware"

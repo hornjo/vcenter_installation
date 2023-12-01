@@ -1,0 +1,31 @@
+---
+- name: Set the timezone
+  vmware.vmware_rest.appliance_system_time_timezone:
+    vcenter_validate_certs: false
+    vcenter_hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
+    vcenter_username: "{{ vcenter_installation_username }}"
+    vcenter_password: "{{ vcenter_installation_password }}"
+    name: "{{ vcenter_installation_timezone }}"
+    state: set
+  delegate_to: localhost
+
+- name: Create a datacenter
+  community.vmware.vmware_datacenter:
+    validate_certs: false
+    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
+    username: "{{ vcenter_installation_username }}"
+    password: "{{ vcenter_installation_password }}"
+    datacenter_name: "{{ vcenter_installation_datacenter_name }}"
+    state: present
+  delegate_to: localhost
+
+- name: Create a cluster
+  community.vmware.vmware_cluster:
+    validate_certs: false
+    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
+    username: "{{ vcenter_installation_username }}"
+    password: "{{ vcenter_installation_password }}"
+    datacenter_name: "{{ vcenter_installation_datacenter_name }}"
+    cluster_name: "{{ vcenter_installation_cluster_name }}"
+    state: present
+  delegate_to: localhost

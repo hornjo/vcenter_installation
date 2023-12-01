@@ -1,0 +1,12 @@
+{
+    "status": "success",
+    "status_code": 0,
+    "detail": {
+        "translatable": "Install finished successfully",
+        "localized": "Install finished successfully"
+    },
+    "vcsa": {
+        "sso_domain": "vsphere.local",
+        "system_name": "ce01vcsa01.dev.deu.local"
+    }
+}

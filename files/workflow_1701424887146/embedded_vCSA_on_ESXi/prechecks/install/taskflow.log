@@ -1,0 +1,289 @@
+2023-12-01 10:01:28,648 [taskflow.py:541]: Successfully constructed an ExecutableGraph for <InstallPrecheckTaskFlow - install(PENDING)>
+2023-12-01 10:01:28,650 [taskflow.py:244]: Taskflow <InstallPrecheckTaskFlow - install(PENDING)> has successfully constructed json status file at /Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/embedded_vCSA_on_ESXi/prechecks/install/status.json
+2023-12-01 10:01:28,929 [taskflow.py:995]: Using a single thread to execute <InstallPrecheckTaskFlow - install(PENDING)> on timestamp [1701424888.929465]
+2023-12-01 10:01:28,929 [taskflow.py:633]: Ready to execute <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(PENDING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:01:28,929 [taskflow.py:637]: Execution attempt 1 for Task <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(PENDING)>
+2023-12-01 10:01:28,929 [taskflow.py:645]: Checking Blackboard requirements for task <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(PENDING)>
+2023-12-01 10:01:28,929 [taskflow.py:660]: Verified Blackboard requirements are met for task <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(PENDING)>
+2023-12-01 10:01:28,931 [taskflow.py:1038]: <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:28,945 [taskflow.py:665]: Executing <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(RUNNING)>
+2023-12-01 10:01:28,945 [loggable.py:102]: Running precheck: TargetCredentials
+2023-12-01 10:01:28,945 [loggable.py:102]:  [START] Start executing Task: Verify that the provided credentials for the target ESXi/VC are valid at 10:01:28 
+2023-12-01 10:01:28,947 [taskflow.py:1038]: <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:28,948 [taskflow.py:1038]: <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,038 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: TargetCredentials' in TaskFlow 'install' at 10:01:29 
+2023-12-01 10:01:29,040 [taskflow.py:1038]: <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,042 [taskflow.py:1038]: <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:29,044 [taskflow.py:1038]: <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:29,061 [taskflow.py:713]: Finished executing <TargetCredentialsTask - com.vmware.vcsa.installer.prechecks.target_credentials(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:01:29,061 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:01:29,075 [taskflow.py:633]: Ready to execute <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:01:29,076 [taskflow.py:637]: Execution attempt 1 for Task <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:29,076 [taskflow.py:645]: Checking Blackboard requirements for task <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:29,076 [taskflow.py:660]: Verified Blackboard requirements are met for task <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:29,077 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,091 [taskflow.py:665]: Executing <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(RUNNING)>
+2023-12-01 10:01:29,091 [loggable.py:102]: Running precheck: HostConfigs
+2023-12-01 10:01:29,092 [loggable.py:102]:  [START] Start executing Task: Precheck CPU, memory and datastore size requirements for a host. at 10:01:29 
+2023-12-01 10:01:29,093 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,095 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,230 [loggable.py:102]: Validating the resource requirements on the host...
+2023-12-01 10:01:29,966 [loggable.py:102]: Could not find the hardware virtualization key from the ESXi host 'ce01esx01.dev.deu.local'.
+2023-12-01 10:01:29,966 [loggable.py:102]: Found datastore 'datastore1' in host 'ce01esx01.dev.deu.local': Capacity = 121.75 GB. Free space = 120.34 GB.
+Found non-clustered host 'ce01esx01.dev.deu.local'. Memory size: 16.0 GB. Physical CPU (core) count: 8. CPUs do not have hyperthreading capability.
+2023-12-01 10:01:29,969 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,969 [loggable.py:102]: Host 'ce01esx01.dev.deu.local': Standalone (non-clustered) host requirements are met.
+2023-12-01 10:01:29,969 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: HostConfigs' in TaskFlow 'install' at 10:01:29 
+2023-12-01 10:01:29,971 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:29,973 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:29,975 [taskflow.py:1038]: <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:29,990 [taskflow.py:713]: Finished executing <HostConfigsTask - com.vmware.vcsa.installer.prechecks.host_configs(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:01:29,990 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:01:30,004 [taskflow.py:633]: Ready to execute <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:01:30,004 [taskflow.py:637]: Execution attempt 1 for Task <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,004 [taskflow.py:645]: Checking Blackboard requirements for task <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,004 [taskflow.py:660]: Verified Blackboard requirements are met for task <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,006 [taskflow.py:1038]: <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,020 [taskflow.py:665]: Executing <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(RUNNING)>
+2023-12-01 10:01:30,020 [loggable.py:102]: Running precheck: TargetHostType
+2023-12-01 10:01:30,020 [loggable.py:102]:  [START] Start executing Task: Verify the target host type matches the one given in the template at 10:01:30 
+2023-12-01 10:01:30,023 [taskflow.py:1038]: <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,024 [taskflow.py:1038]: <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,114 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: TargetHostType' in TaskFlow 'install' at 10:01:30 
+2023-12-01 10:01:30,116 [taskflow.py:1038]: <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,118 [taskflow.py:1038]: <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:30,120 [taskflow.py:1038]: <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:30,136 [taskflow.py:713]: Finished executing <TargetHostTypeTask - com.vmware.vcsa.installer.prechecks.target_host_type(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:01:30,136 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:01:30,151 [taskflow.py:633]: Ready to execute <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:01:30,151 [taskflow.py:637]: Execution attempt 1 for Task <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,151 [taskflow.py:645]: Checking Blackboard requirements for task <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,151 [taskflow.py:660]: Verified Blackboard requirements are met for task <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,153 [taskflow.py:1038]: <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,169 [taskflow.py:665]: Executing <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(RUNNING)>
+2023-12-01 10:01:30,169 [loggable.py:102]: Running precheck: TargetVersion
+2023-12-01 10:01:30,169 [loggable.py:102]:  [START] Start executing Task: Verify that the target ESXi or VC version meets the minimum requirements at 10:01:30 
+2023-12-01 10:01:30,171 [taskflow.py:1038]: <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,173 [taskflow.py:1038]: <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,257 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: TargetVersion' in TaskFlow 'install' at 10:01:30 
+2023-12-01 10:01:30,260 [taskflow.py:1038]: <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,263 [taskflow.py:1038]: <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:30,265 [taskflow.py:1038]: <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:30,282 [taskflow.py:713]: Finished executing <TargetVersionTask - com.vmware.vcsa.installer.prechecks.target_version(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:01:30,282 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:01:30,296 [taskflow.py:633]: Ready to execute <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:01:30,296 [taskflow.py:637]: Execution attempt 1 for Task <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,296 [taskflow.py:645]: Checking Blackboard requirements for task <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,296 [taskflow.py:660]: Verified Blackboard requirements are met for task <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,298 [taskflow.py:1038]: <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,312 [taskflow.py:665]: Executing <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(RUNNING)>
+2023-12-01 10:01:30,312 [loggable.py:102]: Running precheck: OVAProperties.
+2023-12-01 10:01:30,312 [loggable.py:102]:  [START] Start executing Task: Validate that the OVA image has the required OVA properties. at 10:01:30 
+2023-12-01 10:01:30,314 [taskflow.py:1038]: <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,316 [taskflow.py:1038]: <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,640 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: OVAProperties.' in TaskFlow 'install' at 10:01:30 
+2023-12-01 10:01:30,643 [taskflow.py:1038]: <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,645 [taskflow.py:1038]: <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:30,646 [taskflow.py:1038]: <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:01:30,662 [taskflow.py:713]: Finished executing <OVAPropertiesTask - com.vmware.vcsa.installer.prechecks.ova_properties(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:01:30,662 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:01:30,676 [taskflow.py:633]: Ready to execute <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:01:30,676 [taskflow.py:637]: Execution attempt 1 for Task <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,676 [taskflow.py:645]: Checking Blackboard requirements for task <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,676 [taskflow.py:660]: Verified Blackboard requirements are met for task <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:01:30,678 [taskflow.py:1038]: <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,692 [taskflow.py:665]: Executing <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(RUNNING)>
+2023-12-01 10:01:30,692 [loggable.py:102]: Running precheck: IpFqdnInUse
+2023-12-01 10:01:30,692 [loggable.py:102]:  [START] Start executing Task: Validate the provided ip/fqdn is available to use at 10:01:30 
+2023-12-01 10:01:30,694 [taskflow.py:1038]: <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,698 [taskflow.py:1038]: <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:01:30,698 [loggable.py:102]: Pinging IPv4 address 10.33.0.47
+2023-12-01 10:01:42,718 [loggable.py:102]: Time-out pinging 10.33.0.47.
+2023-12-01 10:01:42,721 [loggable.py:102]: Pinging IPv4 address ce01vcsa01.dev.deu.local
+2023-12-01 10:01:54,741 [loggable.py:102]: Pinging IPv4 address ce01vcsa01.dev.deu.local
+2023-12-01 10:02:06,767 [loggable.py:102]: Pinging IPv4 address ce01vcsa01.dev.deu.local
+2023-12-01 10:02:18,807 [loggable.py:102]: Pinging IPv4 address ce01vcsa01.dev.deu.local
+2023-12-01 10:02:30,832 [loggable.py:102]: Time-out pinging ce01vcsa01.dev.deu.local.
+2023-12-01 10:02:30,834 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: IpFqdnInUse' in TaskFlow 'install' at 10:02:30 
+2023-12-01 10:02:30,848 [taskflow.py:1038]: <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,857 [taskflow.py:1038]: <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:30,862 [taskflow.py:1038]: <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:30,894 [taskflow.py:713]: Finished executing <IpFqdnInUseTask - com.vmware.vcsa.installer.prechecks.ip_fqdn_in_use(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:30,894 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:30,914 [taskflow.py:633]: Ready to execute <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:30,914 [taskflow.py:637]: Execution attempt 1 for Task <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:30,914 [taskflow.py:645]: Checking Blackboard requirements for task <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:30,914 [taskflow.py:660]: Verified Blackboard requirements are met for task <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:30,917 [taskflow.py:1038]: <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,933 [taskflow.py:665]: Executing <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(RUNNING)>
+2023-12-01 10:02:30,933 [loggable.py:102]: No PSC or replication partner hostname found, skipping this task. 
+2023-12-01 10:02:30,934 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: LinkingTargetHostnameValidation' in TaskFlow 'install' at 10:02:30 
+2023-12-01 10:02:30,935 [taskflow.py:1038]: <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,937 [taskflow.py:1038]: <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:30,939 [taskflow.py:1038]: <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:30,953 [taskflow.py:713]: Finished executing <LinkingTargetHostnameValidationTask - com.vmware.vcsa.installer.prechecks.linking_target_hostname_validation(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:30,953 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:30,968 [taskflow.py:633]: Ready to execute <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:30,968 [taskflow.py:637]: Execution attempt 1 for Task <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:30,968 [taskflow.py:645]: Checking Blackboard requirements for task <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:30,968 [taskflow.py:660]: Verified Blackboard requirements are met for task <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:30,970 [taskflow.py:1038]: <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,983 [taskflow.py:665]: Executing <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(RUNNING)>
+2023-12-01 10:02:30,983 [loggable.py:102]: Running precheck: DNSResolveTask
+2023-12-01 10:02:30,984 [loggable.py:102]:  [START] Start executing Task: Validate that if the provided DNS is available to use. at 10:02:30 
+2023-12-01 10:02:30,985 [taskflow.py:1038]: <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,987 [taskflow.py:1038]: <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,987 [loggable.py:102]: This task is not to be run the VCSA appliance
+2023-12-01 10:02:30,987 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: DNSResolveTask' in TaskFlow 'install' at 10:02:30 
+2023-12-01 10:02:30,989 [taskflow.py:1038]: <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:30,991 [taskflow.py:1038]: <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:30,992 [taskflow.py:1038]: <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,006 [taskflow.py:713]: Finished executing <DNSResolveTask - com.vmware.vcsa.installer.prechecks.dns_resolve_task(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,006 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,020 [taskflow.py:633]: Ready to execute <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,020 [taskflow.py:637]: Execution attempt 1 for Task <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,021 [taskflow.py:645]: Checking Blackboard requirements for task <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,021 [taskflow.py:660]: Verified Blackboard requirements are met for task <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,022 [taskflow.py:1038]: <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,036 [taskflow.py:665]: Executing <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(RUNNING)>
+2023-12-01 10:02:31,036 [loggable.py:102]: Running precheck: ESXManagementStatus
+2023-12-01 10:02:31,037 [loggable.py:102]:  [START] Start executing Task: Validate the target ESXi management status at 10:02:31 
+2023-12-01 10:02:31,038 [taskflow.py:1038]: <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,040 [taskflow.py:1038]: <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,170 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: ESXManagementStatus' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,174 [taskflow.py:1038]: <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,177 [taskflow.py:1038]: <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,180 [taskflow.py:1038]: <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,199 [taskflow.py:713]: Finished executing <ESXManagementStatusTask - com.vmware.vcsa.installer.prechecks.esx_management_status(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,199 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,215 [taskflow.py:633]: Ready to execute <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,215 [taskflow.py:637]: Execution attempt 1 for Task <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,215 [taskflow.py:645]: Checking Blackboard requirements for task <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,215 [taskflow.py:660]: Verified Blackboard requirements are met for task <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,217 [taskflow.py:1038]: <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,231 [taskflow.py:665]: Executing <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(RUNNING)>
+2023-12-01 10:02:31,231 [loggable.py:102]: Running precheck: ApplianceName
+2023-12-01 10:02:31,231 [loggable.py:102]:  [START] Start executing Task: Validate the provided target appliance name is available to use at 10:02:31 
+2023-12-01 10:02:31,233 [taskflow.py:1038]: <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,235 [taskflow.py:1038]: <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,325 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: ApplianceName' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,328 [taskflow.py:1038]: <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,330 [taskflow.py:1038]: <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,333 [taskflow.py:1038]: <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,350 [taskflow.py:713]: Finished executing <ApplianceNameTask - com.vmware.vcsa.installer.prechecks.appliance_name(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,350 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,366 [taskflow.py:633]: Ready to execute <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,366 [taskflow.py:637]: Execution attempt 1 for Task <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,366 [taskflow.py:645]: Checking Blackboard requirements for task <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,366 [taskflow.py:660]: Verified Blackboard requirements are met for task <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,368 [taskflow.py:1038]: <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,382 [taskflow.py:665]: Executing <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(RUNNING)>
+2023-12-01 10:02:31,382 [loggable.py:102]: 
+2023-12-01 10:02:31,383 [loggable.py:102]: ================== [START] Start executing Task:  at 10:02:31 ==================
+2023-12-01 10:02:31,385 [taskflow.py:1038]: <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,386 [taskflow.py:1038]: <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,387 [loggable.py:102]: = [SUCCEEDED] Successfully executed Task '' in TaskFlow 'install' at 10:02:31 =
+2023-12-01 10:02:31,389 [taskflow.py:1038]: <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,391 [taskflow.py:1038]: <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,393 [taskflow.py:1038]: <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,408 [taskflow.py:713]: Finished executing <TargetApplianceTypeTask - com.vmware.vcsa.installer.prechecks.target_appliance_type(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,408 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,422 [taskflow.py:633]: Ready to execute <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,422 [taskflow.py:637]: Execution attempt 1 for Task <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,422 [taskflow.py:645]: Checking Blackboard requirements for task <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,422 [taskflow.py:660]: Verified Blackboard requirements are met for task <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,424 [taskflow.py:1038]: <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,439 [taskflow.py:665]: Executing <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(RUNNING)>
+2023-12-01 10:02:31,439 [loggable.py:102]: Running precheck: TargetDsFreespace
+2023-12-01 10:02:31,439 [loggable.py:102]:  [START] Start executing Task: Check whether the datastore's free space accommodate the VCSA's deployment option at 10:02:31 
+2023-12-01 10:02:31,441 [taskflow.py:1038]: <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,443 [taskflow.py:1038]: <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,444 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: TargetDsFreespace' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,445 [taskflow.py:1038]: <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,447 [taskflow.py:1038]: <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,451 [taskflow.py:1038]: <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,466 [taskflow.py:713]: Finished executing <TargetDsFreespaceTask - com.vmware.vcsa.installer.prechecks.target_ds_freespace(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,466 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,498 [taskflow.py:633]: Ready to execute <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,499 [taskflow.py:637]: Execution attempt 1 for Task <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,499 [taskflow.py:645]: Checking Blackboard requirements for task <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,499 [taskflow.py:660]: Verified Blackboard requirements are met for task <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,501 [taskflow.py:1038]: <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,515 [taskflow.py:665]: Executing <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(RUNNING)>
+2023-12-01 10:02:31,516 [loggable.py:102]: Running precheck: SSOCredentials
+2023-12-01 10:02:31,516 [loggable.py:102]:  [START] Start executing Task: Verify the provided SSO info is valid by connecting to the STS service. at 10:02:31 
+2023-12-01 10:02:31,518 [taskflow.py:1038]: <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,520 [taskflow.py:1038]: <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,520 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: SSOCredentials' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,522 [taskflow.py:1038]: <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,523 [taskflow.py:1038]: <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,525 [taskflow.py:1038]: <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,540 [taskflow.py:713]: Finished executing <SSOCredentialsTask - com.vmware.vcsa.installer.prechecks.sso_credentials(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,540 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,554 [taskflow.py:633]: Ready to execute <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,554 [taskflow.py:637]: Execution attempt 1 for Task <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,554 [taskflow.py:645]: Checking Blackboard requirements for task <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,554 [taskflow.py:660]: Verified Blackboard requirements are met for task <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,557 [taskflow.py:1038]: <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,572 [taskflow.py:665]: Executing <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(RUNNING)>
+2023-12-01 10:02:31,572 [loggable.py:102]: Running precheck: SSOExternal
+2023-12-01 10:02:31,572 [loggable.py:102]:  [START] Start executing Task: Verify that the provided external SSO (PSC)/Embedded info is valid at 10:02:31 
+2023-12-01 10:02:31,574 [taskflow.py:1038]: <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,576 [taskflow.py:1038]: <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,576 [loggable.py:102]: Skipping the 'Verify that the provided external SSO (PSC)/Embedded info is valid' precheck as there is no external SSO information.
+2023-12-01 10:02:31,576 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running precheck: SSOExternal' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,579 [taskflow.py:1038]: <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,581 [taskflow.py:1038]: <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,582 [taskflow.py:1038]: <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,598 [taskflow.py:713]: Finished executing <SSOExternalTask - com.vmware.vcsa.installer.prechecks.sso_external(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,598 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,614 [taskflow.py:633]: Ready to execute <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,614 [taskflow.py:637]: Execution attempt 1 for Task <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,614 [taskflow.py:645]: Checking Blackboard requirements for task <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,615 [taskflow.py:660]: Verified Blackboard requirements are met for task <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,616 [taskflow.py:1038]: <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,636 [taskflow.py:665]: Executing <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(RUNNING)>
+2023-12-01 10:02:31,636 [loggable.py:102]: Running Pre-check: vSAN Bootstrap.
+2023-12-01 10:02:31,636 [loggable.py:102]:  [START] Start executing Task: Running Pre-check for vSAN Bootstrap. at 10:02:31 
+2023-12-01 10:02:31,639 [taskflow.py:1038]: <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,644 [taskflow.py:1038]: <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,645 [loggable.py:102]: No VCSA cluster section found for vSAN, skipping this task. 
+2023-12-01 10:02:31,645 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running Pre-check: vSAN Bootstrap.' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,647 [taskflow.py:1038]: <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,649 [taskflow.py:1038]: <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,651 [taskflow.py:1038]: <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,665 [taskflow.py:713]: Finished executing <VSANBootstrapTask - com.vmware.vcsa.installer.precheck.vsan_bootstrap(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,665 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,681 [taskflow.py:633]: Ready to execute <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,681 [taskflow.py:637]: Execution attempt 1 for Task <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,681 [taskflow.py:645]: Checking Blackboard requirements for task <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,681 [taskflow.py:660]: Verified Blackboard requirements are met for task <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,684 [taskflow.py:1038]: <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,699 [taskflow.py:665]: Executing <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(RUNNING)>
+2023-12-01 10:02:31,699 [loggable.py:102]: Running Pre-check: vSAN Cluster Health Checks.
+2023-12-01 10:02:31,699 [loggable.py:102]:  [START] Start executing Task: Running vSAN Cluster Health Checks. at 10:02:31 
+2023-12-01 10:02:31,702 [taskflow.py:1038]: <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,704 [taskflow.py:1038]: <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,704 [loggable.py:102]: VCSA cluster section is not available in the template. Skipping this task.
+2023-12-01 10:02:31,704 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running Pre-check: vSAN Cluster Health Checks.' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,706 [taskflow.py:1038]: <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,708 [taskflow.py:1038]: <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,710 [taskflow.py:1038]: <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,725 [taskflow.py:713]: Finished executing <VSANClusterHealthTask - com.vmware.vcsa.installer.precheck.vsan_cluster_health(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,725 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(RUNNING)> overall status is now RUNNING
+2023-12-01 10:02:31,740 [taskflow.py:633]: Ready to execute <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)> using <_MainThread(MainThread, started 8018776832)>
+2023-12-01 10:02:31,740 [taskflow.py:637]: Execution attempt 1 for Task <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,740 [taskflow.py:645]: Checking Blackboard requirements for task <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,740 [taskflow.py:660]: Verified Blackboard requirements are met for task <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(PENDING)> in <InstallPrecheckTaskFlow - install(RUNNING)>
+2023-12-01 10:02:31,742 [taskflow.py:1038]: <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,758 [taskflow.py:665]: Executing <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(RUNNING)>
+2023-12-01 10:02:31,758 [loggable.py:102]: Running Pre-check: vSphere vLCM Cluster Enablement.
+2023-12-01 10:02:31,758 [loggable.py:102]:  [START] Start executing Task: Running Pre-check for vSphere vLCM Cluster Enablement. at 10:02:31 
+2023-12-01 10:02:31,760 [taskflow.py:1038]: <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,762 [taskflow.py:1038]: <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,762 [loggable.py:102]:  [SUCCEEDED] Successfully executed Task 'Running Pre-check: vSphere vLCM Cluster Enablement.' in TaskFlow 'install' at 10:02:31 
+2023-12-01 10:02:31,764 [taskflow.py:1038]: <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(RUNNING)> in <InstallPrecheckTaskFlow - install(RUNNING)> status changed to: RUNNING
+2023-12-01 10:02:31,766 [taskflow.py:1038]: <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(SUCCEEDED)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,768 [taskflow.py:1038]: <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(SUCCEEDED)> in <InstallPrecheckTaskFlow - install(SUCCEEDED)> status changed to: SUCCEEDED
+2023-12-01 10:02:31,782 [taskflow.py:713]: Finished executing <VLCMClusterTask - com.vmware.vcsa.installer.precheck.vlcm_cluster(SUCCEEDED)> and its status is SUCCEEDED
+2023-12-01 10:02:31,783 [taskflow.py:716]: <InstallPrecheckTaskFlow - install(SUCCEEDED)> overall status is now SUCCEEDED

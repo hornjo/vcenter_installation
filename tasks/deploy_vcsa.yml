@@ -1,0 +1,72 @@
+---
+- name: Check if vCenter already exists
+  community.vmware.vmware_about_info:
+    validate_certs: false
+    hostname: "{{ vcenter_installation_ip }}"
+    username: "{{ vcenter_installation_username }}"
+    password: "{{ vcenter_installation_password }}"
+  delegate_to: localhost
+  ignore_errors: true
+  timeout: 10
+  register: result
+
+- name: Determining control node OS
+  ansible.builtin.setup:
+  delegate_to: localhost
+  register: locahost_facts
+
+- name: Setting path for CLI installer - MacOSX
+  ansible.builtin.set_fact:
+    cli_installer_path: "{{ vcenter_installation_installer_path }}/vcsa-cli-installer/mac"
+  when:
+    - locahost_facts.ansible_facts.ansible_distribution == "MacOSX"
+    - result is not succeeded
+
+- name: Setting path for CLI installer - Linux
+  ansible.builtin.set_fact:
+    cli_installer_path: "{{ vcenter_installation_installer_path }}/vcsa-cli-installer/lin64"
+  when:
+    - cli_installer_path is not defined
+    - result is not succeeded
+
+- name: Creating installer json file
+  ansible.builtin.template:
+    src: embedded_vCSA_on_ESXi.json.j2
+    dest: "{{ role_path }}/files/embedded_vCSA_on_ESXi.json"
+    mode: '0644'
+  delegate_to: localhost
+  when: result is not succeeded
+
+- name: Verfing the json file
+  ansible.builtin.command:
+    argv:
+      - ./vcsa-deploy
+      - install
+      - --accept-eula
+      - --acknowledge-ceip
+      - --no-ssl-certificate-verification
+      - --verify-template-only
+      - "{{ role_path }}/files/embedded_vCSA_on_ESXi.json"
+  args:
+    chdir: "{{ cli_installer_path }}"
+  delegate_to: localhost
+  register: verfingjson
+  changed_when: verfingjson.rc == 0
+  when: result is not succeeded
+
+- name: Deploy the vCenter
+  ansible.builtin.command:
+    argv:
+      - ./vcsa-deploy
+      - install
+      - --accept-eula
+      - --acknowledge-ceip
+      - --no-esx-ssl-verify
+      - "--log-dir={{ role_path }}/files"
+      - "{{ role_path }}/files/embedded_vCSA_on_ESXi.json"
+  args:
+    chdir: "{{ cli_installer_path }}"
+  delegate_to: localhost
+  register: deploycommand
+  changed_when: deploycommand.rc == 0
+  when: result is not succeeded

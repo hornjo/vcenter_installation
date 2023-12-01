@@ -1,0 +1,20 @@
+{
+  "py/object": "tasking.utils.blackboard.Blackboard",
+  "py/state": {
+    "data": {
+      "template_list": [
+        "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/embedded_vCSA_on_ESXi.json"
+      ],
+      "template_format": "json",
+      "operation": "install",
+      "workflow_logger_name": "vCSACliInstallLogger",
+      "cli_arg_accept_eula": true,
+      "cli_arg_verify_template_only": false,
+      "workflow_log_dir": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146",
+      "cli_arg_acknowledge_ceip": true,
+      "cli_arg_precheck_rpm_path": null
+    },
+    "json_file_path": "/Users/johanneshorn/Git/MB_workspace/vsphere_3_tier/vcenter_installation/files/workflow_1701424887146/template_validation/blackboard.json",
+    "maskables_dict": null
+  }
+}

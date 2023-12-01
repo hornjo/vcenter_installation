@@ -1,0 +1,74 @@
+{
+    "__version": "2.13.0",
+    "__comments": "Template to deploy a vCenter Server Appliance with an embedded Platform Services Controller on an ESXi host.",
+    "new_vcsa": {
+        "esxi": {
+            "hostname": "{{ inventory_hostname }}",
+            "username": "{{ ansible_user }}",
+            "password": "{{ ansible_password }}",
+            "deployment_network": "{{ vcenter_installation_target_network }}",
+            "datastore": "{{ vcenter_installation_target_datastore }}"
+        },
+        "appliance": {
+            "__comments": [
+                "This are the details for the vm on the ESX host"
+            ],
+            "thin_disk_mode": true,
+            "deployment_option": "{{ vcenter_installation_size }}",
+            "name": "{{ vcenter_installation_vm_name }}"
+        },
+        "network": {
+            "ip_family": "ipv4",
+            "mode": "static",
+            "system_name": "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain | lower }}",
+            "ip": "{{ vcenter_installation_ip }}",
+            "prefix": "{{ vcenter_installation_prefix }}",
+            "gateway": "{{ vcenter_installation_gateway }}",
+            "dns_servers": [
+                "{{ vcenter_installation_dns_servers[0] }},{{ vcenter_installation_dns_servers[1] }}"
+            ]
+        },
+        "os": {
+            "password": "{{ vcenter_installation_root_password }}",
+            "ssh_enable": true,
+            "ntp_servers": [
+                "{{ vcenter_installation_ntp_servers[0] }},{{ vcenter_installation_ntp_servers[1] }}"
+            ]
+        },
+        "sso": {
+            "password": "{{ vcenter_installation_password }}",
+            "domain_name": "vsphere.local"
+        }
+    },
+    "ceip": {
+        "description": {
+            "__comments": [
+                "++++VMware Customer Experience Improvement Program (CEIP)++++",
+                "VMware's Customer Experience Improvement Program (CEIP) ",
+                "provides VMware with information that enables VMware to ",
+                "improve its products and services, to fix problems, ",
+                "and to advise you on how best to deploy and use our ",
+                "products. As part of CEIP, VMware collects technical ",
+                "information about your organization's use of VMware ",
+                "products and services on a regular basis in association ",
+                "with your organization's VMware license key(s). This ",
+                "information does not personally identify any individual. ",
+                "",
+                "Additional information regarding the data collected ",
+                "through CEIP and the purposes for which it is used by ",
+                "VMware is set forth in the Trust & Assurance Center at ",
+                "http://www.vmware.com/trustvmware/ceip.html . If you ",
+                "prefer not to participate in VMware's CEIP for this ",
+                "product, you should disable CEIP by setting ",
+                "'ceip_enabled': false. You may join or leave VMware's ",
+                "CEIP for this product at any time. Please confirm your ",
+                "acknowledgement by passing in the parameter ",
+                "--acknowledge-ceip in the command line.",
+                "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+            ]
+        },
+        "settings": {
+            "ceip_enabled": false
+        }
+    }
+}

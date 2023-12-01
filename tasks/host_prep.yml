@@ -1,0 +1,66 @@
+---
+- name: Enable SSH Service
+  community.vmware.vmware_host_service_manager:
+    hostname: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    validate_certs: false
+    esxi_hostname: "{{ inventory_hostname_short }}"
+    service_name: TSM-SSH
+    state: present
+  delegate_to: localhost
+
+- name: Gather facts
+  community.vmware.vmware_host_facts:
+    hostname: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    validate_certs: false
+  register: host_facts
+  delegate_to: localhost
+
+- name: Set hostname
+  ansible.builtin.command: esxcli system hostname set --fqdn {{ inventory_hostname }}
+  register: sethostname
+  changed_when: sethostname.rc == 0
+  when: host_facts.ansible_facts.ansible_hostname != inventory_hostname
+
+- name: Configure DNS
+  community.vmware.vmware_host_dns:
+    hostname: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    validate_certs: false
+    esxi_hostname: "{{ inventory_hostname_short }}"
+    type: static
+    domain: "{{ vcenter_installation_domain }}"
+    dns_servers: "{{ vcenter_installation_dns_servers }}"
+    search_domains: "{{ vcenter_installation_domain }}"
+  delegate_to: localhost
+
+- name: Configure NTP servers
+  community.vmware.vmware_host_ntp:
+    hostname: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    validate_certs: false
+    esxi_hostname: "{{ inventory_hostname_short }}"
+    ntp_servers: "{{ vcenter_installation_ntp_servers }}"
+  delegate_to: localhost
+
+- name: Checking DNS resolution for the vcenter
+  ansible.builtin.command: nslookup {{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}
+  register: resolution
+  failed_when: resolution.rc != 0
+  changed_when: resolution.rc == 0
+
+- name: Restart NTP service
+  community.vmware.vmware_host_service_manager:
+    hostname: "{{ ansible_host }}"
+    username: "{{ ansible_user }}"
+    password: "{{ ansible_password }}"
+    validate_certs: false
+    esxi_hostname: "{{ inventory_hostname_short }}"
+    service_name: ntpd
+    state: restart
+  delegate_to: localhost

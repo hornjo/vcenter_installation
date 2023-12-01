@@ -1,0 +1,13 @@
+esxi_hosts:
+  vars:
+    ansible_user: root
+  hosts:
+    ce01esx01.dev.deu.local:
+      ansible_host: 10.33.0.44
+      ansible_password: "password"
+    ce01esx02.dev.deu.local:
+      ansible_host: 10.33.0.45
+      ansible_password: "password"
+  # ce01esx03:
+  #   ansible_host: 10.33.1.13
+  #   ansible_password: "password"
