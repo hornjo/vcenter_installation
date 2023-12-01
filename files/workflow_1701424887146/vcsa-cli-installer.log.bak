@@ -1,9 +1,0 @@
-2023-12-01 10:01:27,144 - vCSACliInstallLogger - DEBUG - The installer version 2.13.0.21930385. Component version OpenSSL 1.1.1s  1 Nov 2022, is running on the operating system macOS-14.0-arm64-arm-64bit. Platform has python 3.10.10 while executable is running on python 3.10.10
-2023-12-01 10:01:27,145 - vCSACliInstallLogger - DEBUG - Successfully added subcommand arguments to install argument parser.
-2023-12-01 10:01:27,145 - vCSACliInstallLogger - DEBUG - Successfully added required arguments to install argument parser.
-2023-12-01 10:01:27,146 - vCSACliInstallLogger - DEBUG - Successfully added subcommand arguments to upgrade argument parser.
-2023-12-01 10:01:27,146 - vCSACliInstallLogger - DEBUG - Successfully added required arguments to upgrade argument parser.
-2023-12-01 10:01:27,146 - vCSACliInstallLogger - DEBUG - Successfully added subcommand arguments to migrate argument parser.
-2023-12-01 10:01:27,146 - vCSACliInstallLogger - DEBUG - Successfully added required arguments to migrate argument parser.
-2023-12-01 10:01:27,146 - vCSACliInstallLogger - INFO - Run the installer with "-v" or "--verbose" to log detailed information
-2023-12-01 10:01:27,146 - vCSACliInstallLogger - INFO - Not executing pre-check-only.
