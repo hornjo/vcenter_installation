@@ -1,10 +1,12 @@
 ---
 vcenter_installation_esxi_username: "root"
+
 vcenter_installation_vm_name: "DEV_DEU_CE01VCSA01"
 vcenter_installation_hostname: "ce01vcsa01"
 vcenter_installation_username: "administrator@vsphere.local"
-vcenter_installation_root_password: "Letmein123!"
-vcenter_installation_password: "Letmein123!"
+vcenter_installation_root_password: "password!"
+vcenter_installation_password: "password!"
+
 vcenter_installation_domain: "dev.deu.local"
 vcenter_installation_target_datastore: "datastore1"
 vcenter_installation_target_network: "VM Network"
