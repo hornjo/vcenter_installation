@@ -1,10 +1,15 @@
 ---
+- name: Set vCenter credentials
+  ansible.builtin.set_fact:
+    vcenter_credentials: &vcenter_credentials
+      validate_certs: false
+      hostname: "{{ vcenter_installation_ip }}"
+      username: "{{ vcenter_installation_username }}"
+      password: "{{ vcenter_installation_password }}"
+
 - name: Check if vCenter already exists
   community.vmware.vmware_about_info:
-    validate_certs: false
-    hostname: "{{ vcenter_installation_ip }}"
-    username: "{{ vcenter_installation_username }}"
-    password: "{{ vcenter_installation_password }}"
+    <<: *vcenter_credentials
   delegate_to: localhost
   ignore_errors: true
   timeout: 10

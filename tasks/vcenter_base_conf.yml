@@ -1,4 +1,12 @@
 ---
+- name: Set vCenter credentials
+  ansible.builtin.set_fact:
+    vcenter_credentials: &vcenter_credentials
+      validate_certs: false
+      hostname: "{{ vcenter_installation_ip }}"
+      username: "{{ vcenter_installation_username }}"
+      password: "{{ vcenter_installation_password }}"
+
 - name: Set the timezone
   vmware.vmware_rest.appliance_system_time_timezone:
     vcenter_validate_certs: false
@@ -11,20 +19,14 @@
 
 - name: Create a datacenter
   community.vmware.vmware_datacenter:
-    validate_certs: false
-    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
-    username: "{{ vcenter_installation_username }}"
-    password: "{{ vcenter_installation_password }}"
+    <<: *vcenter_credentials
     datacenter_name: "{{ vcenter_installation_datacenter_name }}"
     state: present
   delegate_to: localhost
 
 - name: Create a cluster
   community.vmware.vmware_cluster:
-    validate_certs: false
-    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
-    username: "{{ vcenter_installation_username }}"
-    password: "{{ vcenter_installation_password }}"
+    <<: *vcenter_credentials
     datacenter_name: "{{ vcenter_installation_datacenter_name }}"
     cluster_name: "{{ vcenter_installation_cluster_name }}"
     state: present

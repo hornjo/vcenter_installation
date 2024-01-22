@@ -1,14 +1,14 @@
 ---
-# - name: Preparation of the ESXi host
-#   ansible.builtin.include_tasks: host_prep.yml
+- name: Preparation of the ESXi host
+  ansible.builtin.include_tasks: host_prep.yml
 
-# - name: Deploy vCenter
-#   ansible.builtin.include_tasks: deploy_vcsa.yml
-#   when: inventory_hostname_short == "ce01esx01"
+- name: Deploy vCenter
+  ansible.builtin.include_tasks: deploy_vcsa.yml
+  when: inventory_hostname == groups["esxi_hosts"][0]
 
 - name: Basic configuration
   ansible.builtin.include_tasks: vcenter_base_conf.yml
-  when: inventory_hostname_short == "ce01esx01"
+  when: inventory_hostname == groups["esxi_hosts"][0]
 
 - name: Joining hosts
   ansible.builtin.include_tasks: join_hosts.yml

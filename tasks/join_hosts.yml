@@ -1,10 +1,15 @@
 ---
+- name: Set vCenter credentials
+  ansible.builtin.set_fact:
+    vcenter_credentials: &vcenter_credentials
+      validate_certs: false
+      hostname: "{{ vcenter_installation_ip }}"
+      username: "{{ vcenter_installation_username }}"
+      password: "{{ vcenter_installation_password }}"
+
 - name: Add ESX servers
   community.vmware.vmware_host:
-    validate_certs: false
-    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
-    username: "{{ vcenter_installation_username }}"
-    password: "{{ vcenter_installation_password }}"
+    <<: *vcenter_credentials
     datacenter_name: "{{ vcenter_installation_datacenter_name }}"
     cluster_name: "{{ vcenter_installation_cluster_name }}"
     esxi_hostname: "{{ inventory_hostname }}"
@@ -15,25 +20,19 @@
 
 - name: Gather datastore facts
   community.vmware.vmware_datastore_info:
-    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
-    username: "{{ vcenter_installation_username }}"
-    password: "{{ vcenter_installation_password }}"
+    <<: *vcenter_credentials
     datacenter_name: "{{ vcenter_installation_datacenter_name }}"
     gather_nfs_mount_info: false
     gather_vmfs_mount_info: false
-    validate_certs: false
   register: datastore_facts
   delegate_to: localhost
 
 - name: Rename local datastore
   community.vmware.vmware_object_rename:
-    hostname: "{{ vcenter_installation_hostname }}.{{ vcenter_installation_domain }}"
-    username: "{{ vcenter_installation_username }}"
-    password: "{{ vcenter_installation_password }}"
+    <<: *vcenter_credentials
     object_name: "{{ item.name }}"
     new_name: "{{ inventory_hostname_short | upper }}_OS"
     object_type: 'Datastore'
-    validate_certs: false
   delegate_to: localhost
   with_items: "{{ datastore_facts.datastores }}"
   when: item.type == "VMFS" and item.name | regex_search('^datastore')
